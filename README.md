@@ -1,2 +1,0 @@
-# kosta202
-repository
