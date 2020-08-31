@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<h1>폼 미션</h1>
+
+<h3>기본정보 입력</h3>
+
+</head>
+<body>
+	<from action="서버의 주소" method="get/post">
+	<ol>
+		<table width="450" border="1" cellspadding="0" cellspacing="2">
+			<caption></caption>
+			<tbody>
+				<tr align="center">
+					<th>이름</th>
+					<th align="left"><input type="text" name="name" id="name"
+						autofocus="autofocus" placeholder="ex)홍길동"></th>
+				</tr>
+				<tr align="center">
+					<th>아이디</th>
+					<th align="left"><input type="text" name="id" id="id">
+						<button>중복체크</button></th>
+				</tr>
+				<tr height="10" align="center">
+					<th>비밀번호</th>
+					<th align="left"><input type="text" name="password"
+						id="password"></th>
+				</tr>
+				<tr height="10" align="center">
+					<th>비밀번호 확인</th>
+					<th align="left"><input type="text" name="passcheck"
+						id="passcheck"></th>
+				</tr>
+				<tr height="10" align="center">
+					<th>이메일</th>
+					<th align="left"><input type="text" name="email" id="email">@
+						<select>
+							<option>선택하세요</option>
+							<option value="N">naver.com</option>
+							<option value="D">daum.net</option>
+							<option value="G">google.co.kr</option>
+					</select></th>
+				<tr height="10" align="center">
+					<th>연락처</th>
+					<th align="left"><label for="tel"></label> <input type="text"
+						name="tel" id="tel" placeholder="ex)010-0000-0000"></th>
+				</tr>
+				<tr height="10" align="center">
+					<th>메일수신여부</th>
+					<th align="left"><input type="radio" name="chk_info"
+						value="yes">받음 <input type="radio" name="chk_info"
+						value="no">받지않음</th>
+				</tr>
+				<tr height="10" align="center">
+					<th>관심분야</th>
+					<th align="left"><input type="checkbox" name="chk_info"
+						value="java">자바 <input type="checkbox" name="chk_info"
+						value="c++">C++ <input type="checkbox" name="chk_info"
+						value="py">파이썬 <input type="checkbox" name="chk_info"
+						value="an">안드로이드</th>
+				</tr>
+
+
+			</tbody>
+		</table>
+	</ol>
+	<button>취소</button>
+	<button>저장</button>
+</body>
+</html>

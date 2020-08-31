@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<script type="text/javascript">
+
+
+	
+	
+	
+	//함수 안에서 함수를 리턴하여 리턴함수를 호출하는 예제 구현
+	var foo2 = function a() {
+		return function b() {	//리턴함수
+			console.log("함수를 리턴하는 예제");
+		}
+	}
+	var z = foo2;
+	z()();
+	
+	(function() {	//즉시실행 함수
+		console.log("즉시 실행됨");
+	})();
+	
+	
+
+</script>
+</body>
+</html>

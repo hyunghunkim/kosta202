@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	//사용자 정의 객체
+
+	//1.object객체
+
+	var obj = new Object();
+	obj.name = "홍길동";
+	obj.age = 20;
+
+	console.log("이름 : " + obj.name);
+	console.log("나이 : " + obj.age);
+
+	//2.리터럴 형식 개체
+
+	var a = {};
+	var obj2 = {
+		name : "박길동",
+		age : 20,
+		display : function() {
+			console.log("name : " + this.name);
+		}
+	};
+	
+	obj2.display();
+	
+	//함수도 객체이다.
+	
+	function add(x,y) {
+		return x + y;
+	}
+	
+	add.result = add(100,200);
+	add.status = "ok";
+	
+	console.log(add.result);
+	console.log(add.status);
+	
+	//퀴즈 > 리터런형식으로 객체를 임의로 생성 후
+	//		동적프로퍼티와 메서드를 등록 후 사용하는 에제를 구현하시오.
+	
+ 	var obj01 = {
+			name:"김형준",
+			age:29,
+			person : function () {
+				console.log(this.name+this.age+this.tr);
+			}
+	};
+	
+	obj01.tr = "남";
+	obj01.person();
+
+	
+	//퀴즈 > 리터럴형식으로 객체를 구현하시오.
+	//	Person객체 (name:프로퍼티,eat(food){}:함수)
+	//	결과 > 홍길동이 밥을 먹었습니다.
+	
+	var Person = {
+			name : "홍길동",
+			eat : function (food) {
+				console.log(this.name+"이 "+food+"을 먹었습니다.");
+			}
+	};
+	Person.eat("밥");
+	
+	var student = {
+			name:"조길동",
+			kor:90,
+			eng:80,
+			mat:70
+	};
+	
+/* 	var output="";
+	output +="이름" + student.name + " 총점: "+ (student.kor+student.eng+student.mat);
+	console.log(output); */
+	
+	/* var output="";
+	with(student){
+		output +="이름" + student.name + " 총점: "+ (kor+eng+mat);
+		console.log(output)
+	} */
+	
+	student.toString = function() {
+		var output = "";
+		for (var key in this) {
+			if(key != 'toString'){
+				output += key+'\t'+this[key]+'\n';
+				
+			}
+		}
+		return output;
+	}
+	
+	console.log(student.toString());
+	
+	//속성 제거
+	delete(student.mat);
+	console.log(student.toString());
+	
+	
+</script>
+</head>
+<body>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+

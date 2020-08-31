@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<h1>폼예제</h1>
+	<from action="서버의 주소"method="get/post">
+		<fieldset>
+			<ol>
+				<li>
+					<label for="name">이름</label>
+					<input type="text"name="name"id="name"
+						autofocus="autofocus"placeholder="ex)홍길동">
+				</li>
+				<li>
+					<label for="name">이메일</label>
+					<input type="email"placeholder="aa@aa.com"
+						required="required">
+				</li>
+				<li>
+					<label>배송일자</label>
+					<input type="date">
+				</li>
+				<li>
+					<label>색상</label>
+					<input type="color">
+				</li>
+				<li>
+					<label>숫자</label>
+					<input type="range"min="1"max="10"value="5">
+				</li>
+				<li>
+					<label>선택</label>
+					<select multiple="multiple">
+						<option value="BMW3">BMW3</option>
+						<option value="BMW5">BMW5</option>
+						<option value="BMW7">BMW7</option>
+					</select>
+				</li>
+					
+			</ol>
+		</fieldset>
+		
+		<fieldset>
+			<input type="submit"value="전송">
+		</fieldset>
+		
+	</from>
+</body>
+</html>

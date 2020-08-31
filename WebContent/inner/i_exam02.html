@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	var arr = [
+		"../images/pic1.jpg",
+		"../images/pic2.jpg",
+		"../images/pic3.jpg",
+		"../images/pic4.jpg",
+		"../images/pic5.jpg",
+		"../images/pic6.jpg",
+		"../images/pic7.jpg",
+		
+	];
+
+	window.onload = function() {
+		var img = document.getElementById("img");
+		//0~6 난수 발생
+		var n = Math.floor(Math.random()*7);
+		
+		img.src = arr[n];
+		
+	}
+
+	
+
+</script>
+</head>
+<body>
+	<img id="img" src="">
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+

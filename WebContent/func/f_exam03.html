@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+
+/* 	function callTenTimes(callback) {
+		//10회반복
+		for (var i = 0; i < 10; i++) {
+			callback();
+		}
+	}
+	
+	var callback = function() {
+		alert('함수호풀');
+	}
+	
+	callTenTimes(callback); */
+	
+/* 	function test(name) {
+		var output = "Hello"+name+"!!!";
+		return function(){
+			alert(output);
+		}
+	}
+	
+	var test_1 = test('Web');
+	var test_2 = test('JavaScript');
+	
+	test_1();
+	test_2();
+	
+	//3초 후에 함수를 실행하자
+	setTimeout(function() {
+		alert("3초가 지났습니다.");
+	}, 3000); */
+	
+/* 	var id = setInterval(function() {
+		console.log('<p>'+new Date()+'</p>');
+	}, 1000)
+	
+	setTimeout(function() {
+		clearInterval(id)
+	}, 10000) */
+	
+/* 	alert('A');
+	setTimeout(function() {
+		alert('B')
+	}, 0);
+	alert('C'); */
+	
+	/* for (var i = 0; i < 3; i++) {
+		setTimeout(function() {
+			alert(i)
+		}, 0);
+	} */
+	
+/* 	for (var i = 0; i < 3; i++) {
+		(function(closed_i) {
+		setTimeout(function() {
+			alert(closed_i)
+		}, 0);
+		})(i);
+	} */
+	
+	for (var i = 0; i < 3; i++) {
+		setTimeout((function() {
+			alert(i)
+		})(i), 0);
+	}
+	
+	
+</script>
+</head>
+<body>
+
+</body>
+</html>
+
+
+
+

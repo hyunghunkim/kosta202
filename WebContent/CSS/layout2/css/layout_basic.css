@@ -1,0 +1,177 @@
+@charset"UTF-8";
+
+#wrapper{
+	background: url("../images/common/wrap_bg.jpg")no-repeat top center;
+}
+
+#header{
+	background: url("../images/common/bg_menubox.png")no-repeat 0 0;
+	width: 940px;
+	height: 105px;
+}
+
+#infoMenu{
+	text-align: right;
+	margin-right: 80px;
+	padding: 8px 0px 7px 0px;
+	font-size: 0.9em;
+}
+
+#infoMenu li{
+	display: inline;
+	padding: 0px 3px 0px 8px;
+}
+
+.logo{
+	position: absolute;
+	top:30px;
+	left:30px;
+}
+
+#navigation{
+	width: 842px;
+	height: 43px;
+	background: url("../images/common/sitemenu_bg.gif")no-repeat 0 0;
+}
+
+#navigation li{
+	float: left;
+}
+
+#navigation li.first{
+	margin-left: 217px;
+}
+
+#naviSub01{
+	position: absolute;
+	top:77px;
+}
+
+#contents{
+	width: 940px;
+	height: 400px;
+	background: url("../images/common/contents_box.png")no-repeat 0 0;
+	position: relative;
+}
+
+#subWrap{
+	width: 215px;
+	height: 200px;
+	float: left;
+	background: url("../images/common/subwrap_bg.gif")no-repeat right 0;
+	position: absolute;
+	top:30px;
+	left:20px;
+}
+
+#subWrap li{
+	padding-top: 10px;
+	padding-bottom: 10px;
+	border-bottom: solid red;
+	width: 180px;
+}
+
+#subWrap h2{
+	border-bottom: solid red;
+	width: 180px;
+}
+
+.select a{
+	color: red;
+}
+
+.search{
+	padding: 20px 0px 20px 0px;
+	background: url("../images/common/bg_search.gif")no-repeat center;
+}
+
+#contentsWrap{
+	width: 590px;
+	float: left;
+	position: absolute;
+	top:30px;
+	left:250px;
+}
+
+#quick{
+	width: 40px;
+	float: right;
+}
+
+#contentsWrap h1{
+	width:600px;
+	float: left;
+	border-bottom: dashed ;
+	
+}
+
+.depth{
+	position: absolute;
+	right:5%;
+}
+
+#contentsArea{
+	position: absolute;
+	top:70px;
+}
+
+.current{
+	color: #80E12A;
+}
+#slogan{
+	width: 100%;
+	height: 100px;
+	position: relative;
+}
+
+#slogan p{
+	float: left;
+}
+
+.sloganCon{
+	width: 750px;
+	position: absolute;
+	top:40px;
+	left:150px;
+}
+
+.guideMenu li{
+	display: inline;
+}
+
+.guideMenu a{
+	padding-left: 30px;
+}
+
+#footer{
+	width: 100%;
+	height: 100px;
+	position: relative;
+}
+
+.footerLogo{
+	float:left;
+	position: absolute;
+	top:30px;
+	left: 30px;
+}
+
+address{
+	position: absolute;
+	left:150px;
+}
+
+.copyright{
+
+}
+
+
+
+
+
+
+
+
+
+
+
