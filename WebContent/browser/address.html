@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	window.onload = function() {
+		var aTags = document.getElementsByTagName("a");
+		
+		for(var i in aTags) {
+			aTags[i].onclick = function() {
+				// window.opener : 자식 윈도우에서 부모 윈도우로 접근한다.
+				window.opener.document.fmt.addr.value = this.innerHTML;
+				self.close();	// 자기 자신의 윈도우를 닫는다.
+			};
+		}
+	};
+</script>
+</head>
+<body>
+	<ul>
+		<li><a href="#">서울특별시 강남구 대치동</a></li>
+		<li><a href="#">서울특별시 금천구 가산동</a></li>
+		<li><a href="#">경기도 성남시 판교동</a></li>
+	</ul>
+</body>
+</html>

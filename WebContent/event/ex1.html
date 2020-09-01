@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>이벤트_1</title>
+<!-- 크로스 브라우징 -->
+<script type="text/javascript" src="crossEvent.js"></script>
+
+<!-- 이벤트 대상, 이벤트 타입, 이벤트 결과(핸들러) -->
+<script type="text/javascript">
+	function doProcess() {
+		var result = document.getElementById("result");
+		result.innerHTML = "<br><span>인라인 방식으로 이벤트 처리</span>";
+	};
+	
+	function doProcess2() {
+		alert("스트립트 영역에서 이벤트 처리");
+	};
+
+	window.onload = function() {
+		var btn = document.getElementById("btn");	// 이벤트 대상
+		//btn.onclick = doProcess2;		// 이벤트 타입 = 이벤트 결과
+		
+		// listner방식으로 하나 이상의  함수를 실행할 수 있다.
+		// 표준 브라우저에만 사용이 가능하다. IE 8에는 돌아가지 않는다.
+		/* btn.addEventListener("click", doProcess2, false);
+		btn.addEventListener("click", doProcess, false); */
+		
+		
+		// 실무에서는 IE 8에서도 동작이 되게끔 해줘야하기 때문에 크로스 브라우징으로 처리해준다.
+		cross.Event.addListener(btn, "click", doProcess2, false);
+				
+	};
+
+</script>
+</head>
+<body>
+	<!-- 인라인 방식으로 이벤트 처리 -->
+	<input type="button" value="버튼1" onclick="doProcess()">&nbsp;&nbsp;		<!-- &nbsp : 공백 1칸  -->
+
+	<!-- 스크립트 영역에서 이벤트 처리 -->
+	<input type="button" value="버튼2" id="btn">
+	<div id="result"></div>
+</body>
+</html>

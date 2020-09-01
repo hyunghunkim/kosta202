@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>This 정리_2</title>
+</head>
+<script type="text/javascript">
+	var data = 10;
+	
+	// 생성자 함수
+	function MyClass() {
+		this.data = 0;
+	};
+	
+	MyClass.prototype.method1 = function() {
+		this.data = 20;
+		data = 30;
+		
+		console.log("data: " + data);	// 30
+		console.log("this.data: " + this.data);		// 20	-> this = 생성자 함수 자신
+		console.log("window.data: " + window.data);	// 30
+	}
+	
+	var m1 = new MyClass();		// m1.data = 0
+	m1.method1();
+
+</script>
+<body>
+
+</body>
+</html>

@@ -2,16 +2,22 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=EUC-KR">
-<title>Insert title here</title>
+<title>DOM_1</title>
 <script type="text/javascript">
 	
-	function showPic(obj){
+	function showPic(obj) {
 		var source = obj.getAttribute("href");
-		var placeholder = document.getElementById("placehoder");
-		placeholder.setAttribute("src",source);
+		var img = document.getElementById("placeholder");
+		img.setAttribute("src", source);
+
+		var title = obj.getAttribute("title");
+		var desc = document.getElementById("description");
 		
-		var text = obj.getAttribute("title");
-		var description = document.
+		// p 태그의 text는 p 태그(노드)의 자식이다. 해당 자식 노드가 text 타입(미리 정의된 타입에서 값이 3)이면 title을 해당 자식 노드에 입력한다.
+		if(desc.firstChild.nodeType == 3) {
+			desc.firstChild.nodeValue = title;
+		}
+		
 	}
 	
 	
@@ -22,7 +28,7 @@
 	<ul>
 		<li>
 			<a href="images/fireworks.jpg" title="A fireworks dispaly" 
-					onclick="showPic(this); return false;">Fireworks</a>
+					onclick="showPic(this); return false;">Fireworks</a>	<!-- html 태그 중 기능을 하는 태그는 a와 form태그의 submit인데, 해당 태그의 기본 이벤트를 꺼줘야 사용자가 지정한 이벤트를 사용할 수 있다. 따라서 return false를 사용한다.  -->
 		</li>
 		<li>
 			<a href="images/coffee.jpg" title="A cup of black coffee" 

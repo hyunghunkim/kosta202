@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Browser Object Model(BOM)_1</title>
+<script type="text/javascript">
+	/* BOM-Window */
+	function winOpen() {
+		window.open("address.html", "주소검색창", "width=300, height=300");
+	};
+	
+	
+
+</script>
+
+</head>
+<body>
+	<form name="fmt">
+		주소 : <input type="text" name="addr">
+		<input type="button" value="주소" onclick="winOpen()">
+	</form>
+</body>
+</html>

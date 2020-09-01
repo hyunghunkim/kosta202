@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+
+	function overImg(obj) {
+		var img = document.getElementById("defalt");
+		img.src = obj.src;
+	}
+	
+	window.onload = function () {
+		var img = document.getElementById("default");
+		var defaultImg = img.src;
+		
+		var imgs = document.getElementsByTagName('img');
+		for (var i = 0; i < img.length; i++) {
+			imgs[i].onmouseover = function () {
+				overImg(this);
+			}
+			imgs[i].onmouseout = function () {
+				img.src = defaultImg;
+			}
+		}
+	}
+
+
+</script>
+</head>
+<body>
+<center>
+	<h2>고양이 앨범</h2>
+	<img id="default"src="../images/cat0.jpg"boder="1"width="600"height="450"></img>
+	<br/><br/><br/>
+	
+	<img src="../images/cat1.jpg"boder="1"width="70"height="70"hspace="10"vspace="10">
+	<img src="../images/cat1.jpg"boder="1"width="70"height="70"hspace="10"vspace="10">
+	<img src="../images/cat1.jpg"boder="1"width="70"height="70"hspace="10"vspace="10">
+	
+</center>
+
+</body>
+</html>
