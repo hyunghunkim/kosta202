@@ -148,26 +148,26 @@
 
 //step10	//이벤트 버블링 처리
 
-//$(function() {
-//	$('#switcher').click(function(){
-//		$('#switcher .button').toggleClass('hidden');
-//	});
-//	
-//	
-//	$('#switcher .button').click(function(event){
-//		$('.button').removeClass('selected');
-//		$(this).addClass('selected');
-//		$('body').removeClass();
-//		
-//		if(this.id == "switcher-large"){
-//			$('body').addClass('large');
-//		}else if(this.id == 'switcher-narrow'){
-//			$('body').addClass('narrow');
-//		}
-//		
-//		event.stopPropagation();
-//	});
-//});
+$(function() {
+	$('#switcher').click(function(){
+		$('#switcher .button').toggleClass('hidden');
+	});
+	
+	
+	$('#switcher .button').click(function(event){
+		$('.button').removeClass('selected');
+		$(this).addClass('selected');
+		$('body').removeClass();
+		
+		if(this.id == "switcher-large"){
+			$('body').addClass('large');
+		}else if(this.id == 'switcher-narrow'){
+			$('body').addClass('narrow');
+		}
+		
+		event.stopPropagation();
+	});
+});
 
 //step11
 //on(): 이벤트를 발생,off(): 이벤트 해제
