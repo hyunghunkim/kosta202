@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	function Student(name, kor, eng, mat) {
+		this.name = name;
+		this.kor = kor;
+		this.eng = eng;
+		this.mat = mat;
+		
+	}
+	
+	Student.prototype = {
+		getSum : function() {
+			return this.kor + this.eng + this.mat;
+		},
+		getAvr : function() {
+			return this.getSum() / 3;
+			
+		},
+		toString : function() {
+			return this.name + "\t" + this.kor + "\t" + this.eng + "\t" + this.mat + "\t" +
+			this.getSum() + "\t" + this.getAvr() + "\n";
+		}
+	};
+	
+	var students = [];
+	students.push(new Student("1번", 10, 100, 100));		// 210
+	students.push(new Student("2번", 20, 10, 90));		// 120
+	students.push(new Student("3번", 30, 90, 80));		// 200
+	students.push(new Student("4번", 40, 20, 70));		// 130
+	students.push(new Student("5번", 50, 80, 60));		// 190
+	students.push(new Student("6번", 60, 30, 50));		// 140
+	students.push(new Student("7번", 70, 70, 40));		// 180
+	students.push(new Student("8번", 80, 40, 30));		// 150
+	students.push(new Student("9번", 90, 60, 20));		// 170
+	students.push(new Student("10번", 100, 50, 10));		// 160
+	
+	// 총점 기준 상위 3명을 남기고 나머지 값들은 배열에서 삭제
+	students = students.sort(function (a, b) {
+		return b.getSum() - a.getSum();
+	}).slice(0, 3);
+	
+	//students.splice(3, 6);
+
+	
+	for(var i in students) {
+		
+		document.write(students[i].toString() + "<br>")
+	}
+	
+
+</script>
+</head>
+<body>
+
+</body>
+</html>

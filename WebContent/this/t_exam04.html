@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>This 정리_4</title>
+<script type="text/javascript">
+	var data = "Global data";
+	var obj1 = {data: "obj1 data"};
+	var obj2 = {data: "obj2 data"};
+	
+	function func() {
+		console.log(this.data);
+	}
+	
+	//func();
+	func.apply(obj1);	// apply() : this를 변경할 때 사용
+	
+</script>
+</head>
+<body>
+
+</body>
+</html>

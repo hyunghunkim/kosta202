@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>이벤트 처리</title>
+<script type="text/javascript">
+	function changeImg(obj) {
+		var img = document.getElementById("default");
+		img.src = obj.src;
+		
+	}
+	
+	window.onload = function() {
+		var img = document.getElementById("default");	// window.onload가 되어야만 DOM구조를 읽어올 수 있기 때문에 전역변수로 초기화하면 안된다.
+		var dImg = img.src;
+		var imgs = document.getElementsByTagName("img");
+
+		for(var i in imgs) {
+			imgs[i].onmouseover = function() {
+				changeImg(this);
+			};
+			imgs[i].onmouseout = function() {
+				img.src = dImg;
+			};
+		}
+	};
+
+</script>
+</head>
+<body>
+<center>
+	<h2>고양이 앨범</h2>
+	<img id="default" src="../images/cat0.jpg" border="1" width="600" height="450">
+	<br/><br/><br/>
+	
+	<img src="../images/cat1.jpg" width="70" height="70" border="1" hspace="10" vspace="10">
+	<img src="../images/cat2.jpg" width="70" height="70" border="1" hspace="10" vspace="10">
+	<img src="../images/cat3.jpg" width="70" height="70" border="1" hspace="10" vspace="10">
+	
+</center>
+
+</body>
+</html>
