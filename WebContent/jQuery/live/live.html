@@ -5,7 +5,20 @@
 <title>Insert title here</title>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript">
-	
+	$(function () {
+		$('button').on('click',function() {
+			$('body').append('<div>Hello jQuery!!!'+$('div').size()+'th</div>');
+		});
+		
+		/* $('div').click(function() {
+			alert($(this).html());
+		}); */
+		
+		$(document.body).on('click','div',function(){
+				alert($(this).html());
+		});
+		
+	})
 </script>
 </head>
 <body>
