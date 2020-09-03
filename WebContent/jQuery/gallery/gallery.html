@@ -8,9 +8,20 @@
 		<title>sample1</title>
 		<script src="jquery.js" type="text/javascript"></script>
 		<script type="text/javascript">
-			
-		</script>
+		//event.preventDefault();
+		$(function() {
+			$('#navi a').click(function(event) {
+				$('#main img').before('<img src="'+$(this).attr('href')+'"/>');
+				$('#main img:last').fadeOut('slow',function(){
+					$(this).remove();
+				});
+				event.preventDefault();
+			});
+		});
 		
+		
+		</script>
+		      
 		<style type="text/css">
 *{
 	margin:0;
