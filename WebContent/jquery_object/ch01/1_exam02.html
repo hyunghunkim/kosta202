@@ -53,35 +53,36 @@
 		 예제02: 함수 단위 코딩으로 만들어진 탭메뉴를 리터럴 방식으로 클래스를 만들어 주세요.
 
 		 */
-		 
-		 $(function() {
-			tabMenu1.init();
-			tabMenu1.initEvent();
-		});
+		 $(function(){
+			 tabMenu1.init();
+			 tabMenu1.initEvent();
+		 });
 	
-		var tabMenu1 = {
-				$tabMenu : null,
-				$menuItems : null,
-				$selectedMenuItem : null,
-				
-				init : function() {
-					this.$tabMenu = $('#tabMenu1');
-					this.$menuItems = this.$tabMenu.find('li');
-				},
-				initEvent : function() {
-					var objThis = this;
-					this.$menuItems.on('click',function(){
-						objThis.selevtedItem($(this));
-				},
-				selectedItem : function(menuItem) {
-					if(this.$selectedMenuItem){
-						this.$selectedMenuItem.removeClass('select');
-					}
-					this.$selectedMenuItem = $menuItem;
-					this.$selectedMenuItem.addClass('select');
-				}
-				
-		};
+		 var tabMenu1 = {
+				 $tabMenu : null,
+				 $menuItems : null,
+				 $selectedMenuItem : null,
+				 
+				 init : function(){
+					 this.$tabMenu = $('#tabMenu1');
+					 this.$menuItems = this.$tabMenu.find('li');
+				 },
+				 initEvent : function(){
+					 var objThis = this;
+					 this.$menuItems.on('click', function(){
+						 objThis.selectedItem($(this));
+					 });
+				 },
+				 selectedItem : function($menuItem){
+					 if(this.$selectedMenuItem){
+						 this.$selectedMenuItem.removeClass('select');
+					 }
+					 this.$selectedMenuItem = $menuItem;
+					 this.$selectedMenuItem.addClass('select');
+				 }
+		 };
+		
+	
 
 	</script>
 </head>
