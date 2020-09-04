@@ -133,9 +133,9 @@ $(function() {
 					});
 
 				
-				};//end success
+				}//end success
 				
 			});
 			return false;
-		});
+		);
 	});
