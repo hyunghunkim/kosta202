@@ -51,8 +51,42 @@
 
 		/*
 		예제02: 예제: 함수 단위 코딩으로 만들어진 탭메뉴를 리터럴 방식으로 클래스를 만들어 주세요.
-
 		 */
+		 
+		 var $tabMenu = null;
+		 var $menuItems = null;
+		 var $selectedMenuItem = null;
+		 
+		 $(function() {
+			init();
+			initEvent();
+		});
+		 
+		 //요소를 초기화
+		 function init() {
+			$tabMenu = $('#tabMenu1');
+			$menuItems = $tabMenu.find('li');
+		}
+		
+		//이벤트 등록
+		function initEvent() {
+			$menuItems.on('click',function(){
+				selevtedItem($(this));
+			});
+		}
+		
+		//이벤트 핸들러 함수
+		function selevtedItem($menuItem) {
+			if($selectedMenuItem){
+				$selectedMenuItem.removeClass('select');
+			}
+			$selectedMenuItem = $menuItem;
+			$selectedMenuItem.addClass('select');
+		}
+		
+		
+		
+		
 		
 
 	</script>

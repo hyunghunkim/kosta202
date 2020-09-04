@@ -53,9 +53,37 @@
 		 예제02: 함수 단위 코딩으로 만들어진 탭메뉴를 프로토타입 방식 클래스로 만들어 주세요.
 
 		 */
+		 
+		 $(function() {
+			 	var tabMenu1 = new TabMenu();
+				tabMenu1.init();
+				tabMenu1.initEvent();
+			});
+		function TabMenu() {
+			this.$tabMenu = null;
+			this.$menuItems = null;
+			this.$selectedMenuItem = null;
+		}
+		
+			
+		TabMenu.prototype.init = function() {
+			this.$tabMenu = $('#tabMenu1');
+			this.$menuItems = this.$tabMenu.find('li');
+		}
 
-
-
+		TabMenu.prototype.initEvent = function() {
+			var objThis = this;
+			this.$menuItems.on('click',function(){
+				objThis.selevtedItem($(this));
+		});
+		
+		TabMenu.prototype.selectedItem = function($meneItem) {
+			if(this.$selectedMenuItem){
+				this.$selectedMenuItem.removeClass('select');
+			}
+			this.$selectedMenuItem = $menuItem;
+			this.$selectedMenuItem.addClass('select');			
+		}
 	</script>
 </head>
 	
