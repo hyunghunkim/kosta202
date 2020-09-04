@@ -72,9 +72,70 @@ $(function() {
 	$('#letter-e a').click(function() {
 		$('#dictionary').empty();
 		$.getScript('c.js');
-		$.get('server3.jsp',{'term':$(this).text()},function(data){
+		$.get('server3.jsp', {
+			'term' : $(this).text()
+		}, function(data) {
 			$('#dictionary').text(data);
 		});
 		return false;
 	});
 });
+
+// step6
+
+$(function() {
+	$('#letter-f form').submit(function() {
+		$('#dictionary').empty();
+		$.ajax({
+			url : 'server3.jsp',
+			type : 'post',
+			data : $(this).serialize(),
+			dataType : 'text',
+			success : successHandler
+		});
+
+		return false;
+	});
+
+	function successHandler(data) {
+		$('#dictionary').text(data);
+	}
+});
+
+// step7
+
+$(function() {
+	$('#letter-b a').click(
+		$('#dictionary').empty();
+			$.ajax({
+				url:'b.json',
+				type:'get',
+				dataType:'json',
+				success:function(data){
+					data.sort(function(a,b){
+						if(a.term<b.term){
+							return 1;
+						}else if(a.term>b.term){
+							return -1;
+						}else{
+							return 0;
+						}
+					});//end sort
+					
+					$.each(data,function(idx,item){
+					var html = '<div class="entry">';
+					html += '<h3 class="term">'+ item.term +'</h3>';
+					html += '<div class="part">'+ item.part +'</div>';
+					html += '<div class="definition">'+ item.definition + '</div>';
+					html +='</div>';
+					
+					$('#dictionary').append(html);
+					});
+
+				
+				};//end success
+				
+			});
+			return false;
+		});
+	});
