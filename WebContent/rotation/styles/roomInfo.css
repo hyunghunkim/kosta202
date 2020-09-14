@@ -1,0 +1,7 @@
+span#price{position: relative; left: 685px; top:30px; z-index: 1;}
+div.priceLogo{position: relative; left: 620px; z-index: 0;}
+div#info{position: relative; top: -70px; width: 600px; line-height: 3}
+div#serviceLogo{position:relative; top: -30px;}
+span#service{position:relative; top:-25px;}
+div#facilitesLogo{position:relative; top: 0px;}
+span#facilites{position:relative; top:5px;}

@@ -1,0 +1,35 @@
+#rooms{
+position: relative;
+background: #ddd;
+width: 640px;
+height: 186px;
+overflow: scroll;
+margin: 1em auto;
+padding: 0;
+text-align: center;
+z-index: 2;
+}
+#rooms .covers{
+position: relative;
+width: 840px;
+z-index:1;
+}
+#rooms a{
+float:left;
+margin:10px;
+height: 146px;
+}
+#rooms .price{
+display:none;
+}
+#rooms .control{
+position:absolute;
+z-index: 3;
+left: 0;
+top:  0;
+}
+img.enlarged{
+position: absolute;
+z-index: 5;
+cursor:pointer;
+}
